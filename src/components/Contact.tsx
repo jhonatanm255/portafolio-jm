@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin, Download } from "lucide-react";
+import { Button } from "./ui/button";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
-    <section id="contacto" className="section-padding">
+    <section id="contacto" className="section-padding relative overflow-hidden">
+      <div className="absolute inset-0 bg-dots-pattern opacity-5"></div>
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -19,46 +22,71 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <div className="glass-card p-8">
+              <div className="grid gap-6">
+                <a
+                  href="mailto:tu@email.com"
+                  className="p-4 hover:bg-white/5 rounded-xl transition-colors group flex items-center gap-4"
+                >
+                  <Mail className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
+                  <div className="text-left">
+                    <h3 className="font-medium mb-1">Email</h3>
+                    <p className="text-white/60">tu@email.com</p>
+                  </div>
+                </a>
+
+                <a
+                  href="https://github.com/tuusuario"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-4 hover:bg-white/5 rounded-xl transition-colors group flex items-center gap-4"
+                >
+                  <Github className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
+                  <div className="text-left">
+                    <h3 className="font-medium mb-1">GitHub</h3>
+                    <p className="text-white/60">@tuusuario</p>
+                  </div>
+                </a>
+
+                <a
+                  href="https://linkedin.com/in/tuusuario"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-4 hover:bg-white/5 rounded-xl transition-colors group flex items-center gap-4"
+                >
+                  <Linkedin className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
+                  <div className="text-left">
+                    <h3 className="font-medium mb-1">LinkedIn</h3>
+                    <p className="text-white/60">@tuusuario</p>
+                  </div>
+                </a>
+
+                <Button
+                  className="w-full group"
+                  onClick={() => window.open("/cv.pdf", "_blank")}
+                >
+                  <Download className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                  Descargar CV
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
             className="glass-card p-8"
           >
-            <div className="grid md:grid-cols-3 gap-6 text-center">
-              <a
-                href="mailto:tu@email.com"
-                className="p-6 hover:bg-white/5 rounded-xl transition-colors group"
-              >
-                <Mail className="w-8 h-8 mx-auto mb-4 text-primary group-hover:scale-110 transition-transform" />
-                <h3 className="font-medium mb-2">Email</h3>
-                <p className="text-white/60">tu@email.com</p>
-              </a>
-
-              <a
-                href="https://github.com/tuusuario"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-6 hover:bg-white/5 rounded-xl transition-colors group"
-              >
-                <Github className="w-8 h-8 mx-auto mb-4 text-primary group-hover:scale-110 transition-transform" />
-                <h3 className="font-medium mb-2">GitHub</h3>
-                <p className="text-white/60">@tuusuario</p>
-              </a>
-
-              <a
-                href="https://linkedin.com/in/tuusuario"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-6 hover:bg-white/5 rounded-xl transition-colors group"
-              >
-                <Linkedin className="w-8 h-8 mx-auto mb-4 text-primary group-hover:scale-110 transition-transform" />
-                <h3 className="font-medium mb-2">LinkedIn</h3>
-                <p className="text-white/60">@tuusuario</p>
-              </a>
-            </div>
+            <ContactForm />
           </motion.div>
         </div>
       </div>

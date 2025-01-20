@@ -25,8 +25,8 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#FF3366",
-          foreground: "#FFFFFF",
+          DEFAULT: "#EAB308", // Mostaza
+          foreground: "#000000",
         },
         secondary: {
           DEFAULT: "#1A1A1A",
@@ -37,14 +37,16 @@ export default {
           foreground: "#FFFFFF",
         },
         accent: {
-          DEFAULT: "#FF3366",
-          foreground: "#FFFFFF",
+          DEFAULT: "#EAB308",
+          foreground: "#000000",
         },
       },
       animation: {
         "fade-in": "fadeIn 0.5s ease-in-out",
         "slide-up": "slideUp 0.5s ease-out",
         "slide-in": "slideIn 0.5s ease-out",
+        "menu-down": "menuDown 0.3s ease-out",
+        "menu-up": "menuUp 0.3s ease-out",
       },
       keyframes: {
         fadeIn: {
@@ -59,6 +61,18 @@ export default {
           "0%": { transform: "translateX(-20px)", opacity: "0" },
           "100%": { transform: "translateX(0)", opacity: "1" },
         },
+        menuDown: {
+          "0%": { transform: "scaleY(0)", opacity: "0", transformOrigin: "top" },
+          "100%": { transform: "scaleY(1)", opacity: "1", transformOrigin: "top" },
+        },
+        menuUp: {
+          "0%": { transform: "scaleY(1)", opacity: "1", transformOrigin: "top" },
+          "100%": { transform: "scaleY(0)", opacity: "0", transformOrigin: "top" },
+        },
+      },
+      backgroundImage: {
+        'dots-pattern': "url('/patterns/dots.svg')",
+        'grid-pattern': "url('/patterns/grid.svg')",
       },
     },
   },
