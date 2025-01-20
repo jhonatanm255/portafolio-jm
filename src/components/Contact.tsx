@@ -6,8 +6,10 @@ import ContactForm from "./ContactForm";
 const Contact = () => {
   return (
     <section id="contacto" className="section-padding relative overflow-hidden">
+      {/* Background patterns and gradients */}
       <div className="absolute inset-0 bg-dots-pattern opacity-5"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(234,179,8,0.15),transparent_70%)]"></div>
       
       <div className="container mx-auto">
         <motion.div
@@ -32,7 +34,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="h-full"
           >
-            <div className="glass-card p-8 h-full flex flex-col justify-between">
+            <div className="glass-card p-8 h-full flex flex-col justify-between group hover:bg-white/5 transition-colors duration-300">
               <div className="grid gap-6">
                 <a
                   href="mailto:tu@email.com"
@@ -73,11 +75,14 @@ const Contact = () => {
               </div>
 
               <Button
-                className="w-full group mt-6"
+                className="w-full group mt-6 relative overflow-hidden"
                 onClick={() => window.open("/cv.pdf", "_blank")}
               >
-                <Download className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-                Descargar CV
+                <span className="relative z-10 flex items-center justify-center">
+                  <Download className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+                  Descargar CV
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Button>
             </div>
           </motion.div>
@@ -89,7 +94,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="h-full"
           >
-            <div className="glass-card p-8 h-full">
+            <div className="glass-card p-8 h-full group hover:bg-white/5 transition-colors duration-300">
               <ContactForm />
             </div>
           </motion.div>

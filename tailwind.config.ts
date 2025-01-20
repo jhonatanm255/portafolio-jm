@@ -48,6 +48,7 @@ export default {
         "menu-down": "menuDown 0.3s ease-out",
         "menu-up": "menuUp 0.3s ease-out",
         "float": "float 6s ease-in-out infinite",
+        "pulse": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
       keyframes: {
         fadeIn: {
@@ -73,6 +74,10 @@ export default {
         float: {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
+        },
+        pulse: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.5" },
         },
       },
       backgroundImage: {
