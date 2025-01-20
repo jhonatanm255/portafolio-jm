@@ -1,12 +1,43 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from "react";
+import NavBar from "../components/NavBar";
+import Hero from "../components/Hero";
+import Technologies from "../components/Technologies";
+import Projects from "../components/Projects";
+import Skills from "../components/Skills";
+import Contact from "../components/Contact";
 
 const Index = () => {
+  useEffect(() => {
+    const handleScroll = (e: Event) => {
+      e.preventDefault();
+      const target = (e.target as HTMLAnchorElement).getAttribute("href");
+      if (target && target.startsWith("#")) {
+        const element = document.querySelector(target);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    };
+
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", handleScroll);
+    });
+
+    return () => {
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.removeEventListener("click", handleScroll);
+      });
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-[#0A0A0A]">
+      <NavBar />
+      <Hero />
+      <Technologies />
+      <Projects />
+      <Skills />
+      <Contact />
     </div>
   );
 };
