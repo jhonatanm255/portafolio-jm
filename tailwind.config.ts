@@ -47,6 +47,7 @@ export default {
         "slide-in": "slideIn 0.5s ease-out",
         "menu-down": "menuDown 0.3s ease-out",
         "menu-up": "menuUp 0.3s ease-out",
+        "float": "float 6s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -69,10 +70,15 @@ export default {
           "0%": { transform: "scaleY(1)", opacity: "1", transformOrigin: "top" },
           "100%": { transform: "scaleY(0)", opacity: "0", transformOrigin: "top" },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
       backgroundImage: {
         'dots-pattern': "url('/patterns/dots.svg')",
         'grid-pattern': "url('/patterns/grid.svg')",
+        'circuit-pattern': "url('/patterns/circuit.svg')",
       },
     },
   },

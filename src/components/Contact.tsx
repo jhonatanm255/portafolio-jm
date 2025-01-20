@@ -7,6 +7,8 @@ const Contact = () => {
   return (
     <section id="contacto" className="section-padding relative overflow-hidden">
       <div className="absolute inset-0 bg-dots-pattern opacity-5"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
+      
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -28,8 +30,9 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
+            className="h-full"
           >
-            <div className="glass-card p-8">
+            <div className="glass-card p-8 h-full flex flex-col justify-between">
               <div className="grid gap-6">
                 <a
                   href="mailto:tu@email.com"
@@ -67,15 +70,15 @@ const Contact = () => {
                     <p className="text-white/60">@tuusuario</p>
                   </div>
                 </a>
-
-                <Button
-                  className="w-full group"
-                  onClick={() => window.open("/cv.pdf", "_blank")}
-                >
-                  <Download className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                  Descargar CV
-                </Button>
               </div>
+
+              <Button
+                className="w-full group mt-6"
+                onClick={() => window.open("/cv.pdf", "_blank")}
+              >
+                <Download className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+                Descargar CV
+              </Button>
             </div>
           </motion.div>
 
@@ -84,9 +87,11 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="glass-card p-8"
+            className="h-full"
           >
-            <ContactForm />
+            <div className="glass-card p-8 h-full">
+              <ContactForm />
+            </div>
           </motion.div>
         </div>
       </div>

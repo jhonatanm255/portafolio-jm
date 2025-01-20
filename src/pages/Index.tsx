@@ -5,6 +5,7 @@ import Technologies from "../components/Technologies";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 const Index = () => {
   useEffect(() => {
@@ -38,6 +39,7 @@ const Index = () => {
       <Projects />
       <Skills />
       <Contact />
+      <Footer />
     </div>
   );
 };

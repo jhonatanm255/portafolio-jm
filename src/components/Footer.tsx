@@ -1,0 +1,43 @@
+import { Github, Linkedin, Mail } from "lucide-react";
+
+const Footer = () => {
+  return (
+    <footer className="py-8 px-6 relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+      <div className="container mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-white/60">
+            © {new Date().getFullYear()} Tu Nombre. Todos los derechos reservados.
+          </p>
+          
+          <div className="flex items-center gap-4">
+            <a
+              href="https://github.com/tuusuario"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 hover:text-primary transition-colors"
+            >
+              <Github className="w-5 h-5" />
+            </a>
+            <a
+              href="https://linkedin.com/in/tuusuario"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 hover:text-primary transition-colors"
+            >
+              <Linkedin className="w-5 h-5" />
+            </a>
+            <a
+              href="mailto:tu@email.com"
+              className="text-white/60 hover:text-primary transition-colors"
+            >
+              <Mail className="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
