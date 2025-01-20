@@ -34,7 +34,7 @@ const Hero = () => {
             href="#contacto"
             className="inline-block bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full transition-colors relative overflow-hidden group"
           >
-            <span className="relative z-10">Contáctame</span>
+            <span className="relative z-10 text-black font-semibold">Contáctame</span>
             <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </a>
         </motion.div>

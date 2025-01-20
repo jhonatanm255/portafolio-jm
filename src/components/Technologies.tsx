@@ -19,10 +19,10 @@ const technologies = {
 
 const Technologies = () => {
   return (
-    <section id="tecnologias" className="section-padding relative overflow-hidden">
+    <section id="tecnologías" className="section-padding relative overflow-hidden">
       <div className="absolute inset-0 bg-dots-pattern opacity-5"></div>
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      <div className="container mx-auto relative">
+      <div className="mx-auto relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

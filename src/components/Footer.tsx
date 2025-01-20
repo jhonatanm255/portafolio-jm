@@ -7,12 +7,13 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/60">
-            © {new Date().getFullYear()} Tu Nombre. Todos los derechos reservados.
+            © {new Date().getFullYear()} Tu Nombre. Todos los derechos
+            reservados.
           </p>
-          
+
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/tuusuario"
+              href="https://github.com/jhonatanm255"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/60 hover:text-primary transition-colors"
@@ -20,7 +21,7 @@ const Footer = () => {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com/in/tuusuario"
+              href="https://www.linkedin.com/in/jhonatan-mu%C3%B1oz-1aa8bb28b/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/60 hover:text-primary transition-colors"

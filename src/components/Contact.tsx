@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Mail, Github, Linkedin, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import ContactForm from "./ContactForm";
+import cv from "../../public/assets/jhonatanHarry.pdf"
 
 const Contact = () => {
   return (
@@ -10,7 +11,7 @@ const Contact = () => {
       <div className="absolute inset-0 bg-dots-pattern opacity-5"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(234,179,8,0.15),transparent_70%)]"></div>
-      
+
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -37,18 +38,18 @@ const Contact = () => {
             <div className="glass-card p-8 h-full flex flex-col justify-between group hover:bg-white/5 transition-colors duration-300">
               <div className="grid gap-6">
                 <a
-                  href="mailto:tu@email.com"
+                  href="jhonm21@gmail.com"
                   className="p-4 hover:bg-white/5 rounded-xl transition-colors group flex items-center gap-4"
                 >
                   <Mail className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
                   <div className="text-left">
                     <h3 className="font-medium mb-1">Email</h3>
-                    <p className="text-white/60">tu@email.com</p>
+                    <p className="text-white/60">jhonm21@gmail.com</p>
                   </div>
                 </a>
 
                 <a
-                  href="https://github.com/tuusuario"
+                  href="https://github.com/jhonatanm255"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-4 hover:bg-white/5 rounded-xl transition-colors group flex items-center gap-4"
@@ -56,12 +57,12 @@ const Contact = () => {
                   <Github className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
                   <div className="text-left">
                     <h3 className="font-medium mb-1">GitHub</h3>
-                    <p className="text-white/60">@tuusuario</p>
+                    <p className="text-white/60">jhonatanm255</p>
                   </div>
                 </a>
 
                 <a
-                  href="https://linkedin.com/in/tuusuario"
+                  href="https://www.linkedin.com/in/jhonatan-mu%C3%B1oz-1aa8bb28b/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-4 hover:bg-white/5 rounded-xl transition-colors group flex items-center gap-4"
@@ -69,14 +70,14 @@ const Contact = () => {
                   <Linkedin className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
                   <div className="text-left">
                     <h3 className="font-medium mb-1">LinkedIn</h3>
-                    <p className="text-white/60">@tuusuario</p>
+                    <p className="text-white/60">@jhonatan-muñoz</p>
                   </div>
                 </a>
               </div>
 
               <Button
                 className="w-full group mt-6 relative overflow-hidden"
-                onClick={() => window.open("/cv.pdf", "_blank")}
+                onClick={() => window.open(cv, "_blank")}
               >
                 <span className="relative z-10 flex items-center justify-center">
                   <Download className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
