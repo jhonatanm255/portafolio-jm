@@ -41,9 +41,9 @@ const NavBar = () => {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="absolute top-full left-0 right-0 nav-blur py-4"
+              className="absolute top-full left-0 right-0 bg-black/40 backdrop-blur-md border-b border-white/10 shadow-lg"
             >
-              <ul className="flex flex-col items-center gap-6 px-6">
+              <ul className="flex flex-col items-center gap-6 px-6 py-4">
                 {["Inicio", "Tecnologías", "Proyectos", "Habilidades", "Contacto"].map(
                   (item) => (
                     <motion.li
