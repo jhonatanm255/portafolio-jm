@@ -106,6 +106,11 @@
 
 
 
+
+
+
+
+
 import { useState } from "react";
 import { Button } from "./ui/button"; // Asumiendo que tienes este componente
 import { toast } from "sonner";
@@ -119,8 +124,9 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     try {
-      const response = await fetch("http://localhost:5000/send-email", {
+      const response = await fetch("https://formspree.io/f/xldgeann", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -150,6 +156,7 @@ const ContactForm = () => {
         <input
           type="text"
           id="name"
+          name="name"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg"
@@ -163,6 +170,7 @@ const ContactForm = () => {
         <input
           type="email"
           id="email"
+          name="email"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg"
@@ -175,6 +183,7 @@ const ContactForm = () => {
         </label>
         <textarea
           id="message"
+          name="message"
           value={formData.message}
           onChange={(e) =>
             setFormData({ ...formData, message: e.target.value })

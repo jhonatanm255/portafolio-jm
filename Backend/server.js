@@ -30,6 +30,15 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+// Verificar el transporter
+transporter.verify((error, success) => {
+  if (error) {
+    console.error("Error al configurar el transporte de nodemailer:", error);
+  } else {
+    console.log("Transporte de nodemailer configurado correctamente:", success);
+  }
+});
+
 // Ruta para manejar el envío de correos
 app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
@@ -50,25 +59,28 @@ app.post("/send-email", async (req, res) => {
   }
 
   try {
+    // Opciones del correo
     const mailOptions = {
-      from: `"${name}" <${process.env.EMAIL_USER}>`, // Usamos siempre tu correo corporativo aquí
-      to: process.env.EMAIL_USER, // Enviar el correo a tu dirección
+      from: `"${name}" <${email}>`, // Mostrar el nombre y email de quien envía
+      to: process.env.EMAIL_USER, // Dirección que recibirá el correo
       subject: "Nuevo mensaje de contacto",
       text: message,
       html: `<p><strong>Nombre:</strong> ${name}</p>
              <p><strong>Email:</strong> ${email}</p>
              <p><strong>Mensaje:</strong><br>${message}</p>`,
-      replyTo: email, // Configura la dirección de respuesta al correo del usuario
+      replyTo: email, // Responder directamente al email del remitente
     };
 
+    // Enviar correo
     await transporter.sendMail(mailOptions);
     res.status(200).json({ message: "Correo enviado correctamente" });
   } catch (error) {
     console.error("Error al enviar el correo:", error);
+
+    // Responder con error detallado
     res.status(500).json({
-      message: "Error al enviar el correo",
-      error: error.message,
-      stack: error.stack,
+      message: "Error al enviar el correo. Inténtalo más tarde.",
+      error: error.message, // Mensaje del error para depuración
     });
   }
 });
