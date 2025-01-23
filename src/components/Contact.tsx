@@ -12,7 +12,7 @@ const Contact = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(234,179,8,0.15),transparent_70%)]"></div>
 
-      <div className="container mx-auto">
+      <div className="lg:container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -20,8 +20,10 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Contacto</h2>
-          <p className="text-white/60 max-w-2xl mx-auto">
+          <h2 className="section-contacts text-3xl md:text-4xl font-bold mb-4">
+            Contacto<span className="text-primary">.</span>
+          </h2>
+          <p className="text-white/60 text-lg max-w-2xl mx-auto">
             ¿Interesado en trabajar juntos? ¡Contáctame por cualquiera de estos
             medios!
           </p>
@@ -38,13 +40,13 @@ const Contact = () => {
             <div className="glass-card p-8 h-full flex flex-col justify-between group hover:bg-white/5 transition-colors duration-300">
               <div className="grid gap-6">
                 <a
-                  href="jhonm21@gmail.com"
+                  href="jhonatan@jhoncode.com"
                   className="p-4 hover:bg-white/5 rounded-xl transition-colors group flex items-center gap-4"
                 >
                   <Mail className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
                   <div className="text-left">
                     <h3 className="font-medium mb-1">Email</h3>
-                    <p className="text-white/60">jhonm21@gmail.com</p>
+                    <p className="text-white/60">jhonatan@jhoncode.com</p>
                   </div>
                 </a>
 

@@ -11,14 +11,14 @@ const skills = [
   },
   {
     category: "Herramientas",
-    items: ["Control de versiones", "Metodologías ágiles", "Testing", "Deploy"],
+    items: ["Control de versiones", "Deploy"],
   },
 ];
 
 const Skills = () => {
   return (
     <section id="habilidades" className="section-padding">
-      <div className="container mx-auto">
+      <div className="lg:container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -26,8 +26,10 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Habilidades</h2>
-          <p className="text-white/60 max-w-2xl mx-auto">
+          <h2 className="section-skills text-3xl md:text-4xl font-bold mb-4">
+            Habilidades<span className="text-primary">.</span>
+          </h2>
+          <p className="text-white/60 text-lg max-w-2xl mx-auto">
             Competencias y conocimientos que he desarrollado a lo largo de mi
             carrera profesional.
           </p>

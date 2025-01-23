@@ -65,7 +65,34 @@
 
   .section-title::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-primary/30 rounded-full;
+    @apply absolute -bottom-1 left-0 w-1/2 h-1 bg-primary/30 rounded-full;
+  }
+
+  .section-skills {
+    @apply text-3xl md:text-4xl font-bold mb-4 relative inline-block;
+  }
+
+  .section-skills::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-1/2 h-1 bg-primary/30 rounded-full;
+  }
+
+  .section-projects {
+    @apply text-3xl md:text-4xl font-bold mb-4 relative inline-block;
+  }
+
+  .section-projects::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-[44%] h-1 bg-primary/30 rounded-full;
+  }
+
+  .section-contacts {
+    @apply text-3xl md:text-4xl font-bold mb-4 relative inline-block;
+  }
+
+  .section-contacts::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-1/2 h-1 bg-primary/30 rounded-full;
   }
 }
 
@@ -118,4 +145,9 @@
 
 .animate-menu-up {
   animation: menuUp 0.3s ease-out;
+}
+
+.nav-blur {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.3);
 }
