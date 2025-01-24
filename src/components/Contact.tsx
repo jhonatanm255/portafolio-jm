@@ -37,7 +37,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="h-full"
           >
-            <div className="glass-card p-8 h-full flex flex-col justify-between group hover:bg-white/5 transition-colors duration-300">
+            <div className="glass-card p-4 h-full flex flex-col justify-between group hover:bg-white/5 transition-colors duration-300">
               <div className="grid gap-6">
                 <a
                   href="jhonatan@jhoncode.com"
