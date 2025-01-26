@@ -40,7 +40,7 @@ const Contact = () => {
             <div className="glass-card p-4 h-full flex flex-col justify-between group hover:bg-white/5 transition-colors duration-300">
               <div className="grid gap-6">
                 <a
-                  href="jhonatan@jhoncode.com"
+                  href="mailto:jhonatan@jhoncode.com"
                   className="p-4 hover:bg-white/5 rounded-xl transition-colors group flex items-center gap-4"
                 >
                   <Mail className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />

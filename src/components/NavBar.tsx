@@ -23,7 +23,7 @@ const NavBar = () => {
       <div className="container mx-auto px-6 flex justify-between items-center">
         <p className="text-2xl font-bold text-gradient relative group">
           <span className="text-white">Jhon</span>Code
-          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          {/* <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span> */}
         </p>
 
         <button
@@ -49,7 +49,7 @@ const NavBar = () => {
                   "Tecnologías",
                   "Proyectos",
                   "Habilidades",
-                  "Contacto",
+                  // "Contacto",
                 ].map((item) => (
                   <motion.li
                     key={item}
@@ -80,7 +80,7 @@ const NavBar = () => {
               "Tecnologías",
               "Proyectos",
               "Habilidades",
-              "Contacto",
+              // "Contacto",
             ].map((item) => (
               <li key={item}>
                 <a
