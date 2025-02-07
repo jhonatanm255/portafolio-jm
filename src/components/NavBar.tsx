@@ -17,7 +17,7 @@ const NavBar = () => {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "nav-blur py-4" : "bg-black/30 py-6"
+        isScrolled ? "nav-blur py-4" : "bg-black/60 py-4"
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
@@ -43,7 +43,7 @@ const NavBar = () => {
               transition={{ duration: 0.3 }}
               className="absolute top-full left-0 right-0 nav-blur"
             >
-              <ul className="flex flex-col items-center gap-6 px-6 py-4">
+              <ul className="flex flex-col items-center gap-6 px-6 py-16 bg-black/40">
                 {[
                   "Inicio",
                   "Tecnologías",

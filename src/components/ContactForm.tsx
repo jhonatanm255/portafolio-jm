@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button } from "./ui/button"; // Asumiendo que tienes este componente
+import { Button } from "./ui/button";
 import { toast } from "sonner";
 
 const ContactForm = () => {
