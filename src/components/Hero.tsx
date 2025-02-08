@@ -113,7 +113,7 @@ const Hero = () => {
           <img
             src={foto}
             alt="Tu Nombre"
-            className="w-full h-full object-contain"
+            className="w-full h-[115%] absolute z-1000 object-contain"
           />
         </div>
       </div>
