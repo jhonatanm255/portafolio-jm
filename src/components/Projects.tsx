@@ -1,56 +1,6 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
-import project1 from "../../public/assets/img-projects/karina-dance.png"
-import project2 from "../../public/assets/img-projects/learning.png";
-import project3 from "../../public/assets/img-projects/residentes.png";
-import project4 from "../../public/assets/img-projects/dashboard.png";
-
-const projects = [
-  {
-    title: "Danza Karina Gym",
-    description:
-      "Landing page para una academia de danzas para niñas, con panel de administración para gestionar la galería, los eventos, testimonios y la sección de tienda. Sistema de eliminación automática para los eventos caducados. Diseño responsivo y optimizado para SEO.",
-    image: project1,
-    tags: ["React", "Typescript", "Tailwind", "Firebase", "Supabase"],
-    links: {
-      demo: "https://www.danzakarinagym.com",
-      github: "https://github.com/jhonatanm255/karina-dance",
-    },
-  },
-  {
-    title: "Learning English",
-    description:
-      "Proyecto de PWA personal para aprender inglés, con un sistema de autenticación de Google, lecciones, traductor y un chatbot para practicar conversaciones. Además, cuenta con un sistema de actualizaciones para notificar y descargar versiones con mejoras, correcciones o nuevas funcionalidades.",
-    image: project2,
-    tags: ["React", "Tailwind", "Firebase", "Gemini Api"],
-    links: {
-      demo: "https://app-ingles.vercel.app/",
-      github: "https://github.com/jhonatanm255/learning-english",
-    },
-  },
-  {
-    title: "Control de Condominios",
-    description:
-      "Proyecto de PWA para gestionar los residentes de uno o varios condominios, con un sistema de autenticación de Google, creación de cuentas con verificación por email, operaciones CRUD, persistencia de datos y migración de los mismos mediante código QR.",
-    image: project3,
-    tags: ["HTML", "Css", "Javascript", "Firebase"],
-    links: {
-      demo: "https://jhonatanm255.github.io/App-Nunoa/#",
-      github: "https://github.com/jhonatanm255/App-Nunoa",
-    },
-  },
-  {
-    title: "Dashboard Financiero",
-    description:
-      "Creación de un dashboard como proyecto de práctica para visualizar activos financieros como: criptomonedas, acciones de empresas y datos de indicadores económicos de Chile, utilizando APIs financieras como: mindicador.cl, Binance y widget de TradingView, conectándolas mediante WebSocket. Incluye un diseño responsivo y dark mode para mejorar la accesibilidad.",
-    image: project4,
-    tags: ["HTML", "Css", "Javascript", "API"],
-    links: {
-      demo: "https://jhonatanm255.github.io/dashboard/",
-      github: "https://github.com/jhonatanm255/dashboard",
-    },
-  },
-];
+import projectsData from "../data/projectsData.json"; // Importamos el JSON
 
 const Projects = () => {
   return (
@@ -73,7 +23,7 @@ const Projects = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+          {projectsData.map((project, index) => (
             <motion.article
               key={project.title}
               initial={{ opacity: 0, y: 20 }}
