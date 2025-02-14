@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      className="min-h-screen flex items-center justify-center section-padding pt-32 relative overflow-hidden"
+      className="min-h-auto flex items-center justify-center section-padding pt-32 relative overflow-hidden"
     >
       {/* Animated background patterns */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
