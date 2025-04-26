@@ -170,7 +170,7 @@ const technologies = {
       name: "HTML",
       icon: <i className="bx bxl-html5"></i>,
       level: "Intermedio",
-      color: "text-orange-500", // Color de hover
+      color: "text-orange-500",
     },
     {
       name: "CSS",
@@ -281,7 +281,7 @@ const Technologies = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="glass-card p-6 text-center hover:scale-105 transition-transform group"
+                  className="glass-card bg-white/5 backdrop-blur-sm p-6 text-center hover:scale-105 transition-transform group"
                 >
                   <span
                     className={`text-5xl mb-4 block group-hover:scale-110 transition-transform ${tech.color} group-hover:opacity-100 opacity-100`}
@@ -308,7 +308,7 @@ const Technologies = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="glass-card p-6 text-center hover:scale-105 transition-transform group"
+                  className="glass-card bg-white/5 backdrop-blur-sm p-6 text-center hover:scale-105 transition-transform group"
                 >
                   <span
                     className={`text-5xl mb-4 block group-hover:scale-110 transition-transform ${tech.color} group-hover:opacity-100 opacity-80`}

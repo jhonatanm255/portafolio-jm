@@ -37,7 +37,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="h-full"
           >
-            <div className="glass-card p-4 h-full flex flex-col justify-between group hover:bg-white/5 transition-colors duration-300">
+            <div className="glass-card p-8 h-full flex flex-col justify-between group hover:bg-white/5 transition-colors duration-300">
               <div className="grid gap-6">
                 <a
                   href="mailto:jhonatan@jhoncode.com"
@@ -78,7 +78,7 @@ const Contact = () => {
               </div>
 
               <Button
-                className="w-full group mt-6 relative overflow-hidden"
+                className="w-full group mt-6 py-2 relative overflow-hidden"
                 onClick={() => window.open(cv, "_blank")}
               >
                 <span className="relative z-10 flex items-center justify-center">

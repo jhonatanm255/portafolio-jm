@@ -11,7 +11,7 @@ function FooterLinks() {
           rel="noopener noreferrer"
           className="text-white/60 hover:text-primary transition-colors"
         >
-          <Github className="w-5 h-5" />
+          <Github className="w-6 h-6" />
         </a>
         <a
           href="https://www.linkedin.com/in/jhonatan-mu%C3%B1oz-1aa8bb28b/"
@@ -19,13 +19,13 @@ function FooterLinks() {
           rel="noopener noreferrer"
           className="text-white/60 hover:text-primary transition-colors"
         >
-          <Linkedin className="w-5 h-5" />
+          <Linkedin className="w-6 h-6" />
         </a>
         <a
           href="jhonatan@jhoncode.com"
           className="text-white/60 hover:text-primary transition-colors"
         >
-          <Mail className="w-5 h-5" />
+          <Mail className="w-6 h-6" />
         </a>
       </div>
     </div>

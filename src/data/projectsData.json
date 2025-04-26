@@ -1,5 +1,25 @@
 [
   {
+    "title": "RM Construction & Design Studio",
+    "description": "Landing page del sector de la construcción y la arquitectura, creada para un cliente de la empresa HESTEZNA. Este diseño muestra de manera elegante y profesional los servicios que ofrece la empresa, así como también las vías de contacto para solicitar más información y cotizaciones. El sitio web es responsivo y está optimizado para SEO.",
+    "image": "/assets/img-projects/arq.png",
+    "tags": ["React", "Typescript", "Tailwind", "php"],
+    "links": {
+      "demo": "https://rmcdesignstudio.co/",
+      "github": "https://github.com/jhonatanm255/cozy-remodel-nest.git"
+    }
+  },
+  {
+    "title": "Los Angeles News",
+    "description": "Sitio web de noticias creado para un cliente de la empresa HESTEZNA. Implementé un sistema de secciones que permite crear noticias destacadas, del día y complementarias mediante el panel de administración, posicionándolas en sus respectivas categorías en el Home, además de un feed de X (Twitter) con cuentas deportivas. También posee un sistema de eliminación automática para las noticias que tengan un año de publicación. La base de datos fue implementada con Firebase, utilizando los distintos servicios que ofrece. El diseño es responsivo y está optimizado para SEO.",
+    "image": "/assets/img-projects/news.png",
+    "tags": ["React", "Javascript", "Tailwind", "Firebase"],
+    "links": {
+      "demo": "https://lanewssports.com/",
+      "github": "https://github.com/jhonatanm255/karina-dance"
+    }
+  },
+  {
     "title": "Danza Karina Gym",
     "description": "Landing page para una academia de danzas para niñas, con panel de administración para gestionar la galería, los eventos, testimonios y la sección de tienda. Sistema de eliminación automática para los eventos caducados. Diseño responsivo y optimizado para SEO.",
     "image": "/assets/img-projects/karina-dance.png",
@@ -13,7 +33,7 @@
     "title": "Learning English",
     "description": "Proyecto de PWA personal para aprender inglés, con un sistema de autenticación de Google, lecciones, traductor y un chatbot para practicar conversaciones. Además, cuenta con un sistema de actualizaciones para notificar y descargar versiones con mejoras, correcciones o nuevas funcionalidades.",
     "image": "/assets/img-projects/learning.png",
-    "tags": ["React", "Tailwind", "Firebase", "Gemini Api"],
+    "tags": ["React", "Javascript", "Tailwind", "Firebase", "Gemini"],
     "links": {
       "demo": "https://app-ingles.vercel.app/",
       "github": "https://github.com/jhonatanm255/learning-english"
@@ -32,7 +52,7 @@
   {
     "title": "Dashboard Financiero",
     "description": "Creación de un dashboard como proyecto de práctica para visualizar activos financieros como: criptomonedas, acciones de empresas y datos de indicadores económicos de Chile, utilizando APIs financieras como: mindicador.cl, Binance y widget de TradingView, conectándolas mediante WebSocket. Incluye un diseño responsivo y dark mode para mejorar la accesibilidad.",
-    "image": "/assets/img-projects/dashboard.png",
+    "image": "/assets/img-projects/dashboardlight.png",
     "tags": ["HTML", "Css", "Javascript", "API"],
     "links": {
       "demo": "https://jhonatanm255.github.io/dashboard/",

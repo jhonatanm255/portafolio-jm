@@ -32,6 +32,7 @@ const HeroSection = () => {
     <section className="hero-section">
       <h1>
         <span className="typed"></span>
+        <span className="opacity-0 text-2xl">D</span>
       </h1>
     </section>
   );

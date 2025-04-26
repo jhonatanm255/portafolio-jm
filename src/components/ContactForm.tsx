@@ -44,9 +44,10 @@ const ContactForm = () => {
           type="text"
           id="name"
           name="name"
+          placeholder="Tu nombre completo"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg"
+          className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg focus:outline-none"
           required
         />
       </div>
@@ -58,9 +59,10 @@ const ContactForm = () => {
           type="email"
           id="email"
           name="email"
+          placeholder="ej: contacto@email.com"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg"
+          className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg focus:outline-none"
           required
         />
       </div>
@@ -71,12 +73,13 @@ const ContactForm = () => {
         <textarea
           id="message"
           name="message"
+          placeholder="Escribe tu mensaje..."
           value={formData.message}
           onChange={(e) =>
             setFormData({ ...formData, message: e.target.value })
           }
           rows={4}
-          className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg"
+          className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg focus:outline-none"
           required
         />
       </div>

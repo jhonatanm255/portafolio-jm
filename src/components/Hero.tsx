@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import HeroTyped from "./ui/HeroTyped";
+import HeroTyped from "./ui/Herotyped"
 import foto from "../../public/assets/img-hero.png";
 import FooterLinks from "./FooterLinks";
 
@@ -21,7 +21,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="text-left md:text-left sm:text-center"
         >
-          <span className="text-primary font-medium block">¡Hola! Soy</span>
+          <span className="text-primary text-xl font-medium block">¡Hola! Soy</span>
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mt-2 mb-4">
             Jhonatan Muñoz
           </h1>
