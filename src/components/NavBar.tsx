@@ -15,7 +15,6 @@ const NavBar = () => {
   }, []);
 
   return (
-    // NAVIGATION BAR
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled ? "nav-blur py-4" : "bg-black/60 py-4"
